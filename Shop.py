@@ -89,17 +89,17 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# --- 產品資料庫 (僅保留蘋果並設為本月推薦) ---
+# --- 產品資料庫 (僅保留最新推薦蘋果產品) ---
 PRODUCTS = {
     "envy_apple": {
         "name": "紐西蘭 Envy 頂級蘋果",
         "sub_name": "香甜脆口果王",
         "image": "apple.jpeg",
         "category": "fruit",
-        "is_recommended": True,
-        "spec": "規格：精美禮盒裝",
-        "description": "來自紐西蘭的頂級 Envy 蘋果，擁有極佳的清脆口感與濃郁香甜風味。果肉細緻且不易變色，是品味生活的優質之選。",
-        "usage": "- **保存方式**：冷藏保存，冰涼後切片食用風味更佳。"
+        "is_recommended": True, 
+        "spec": "規格：精美禮盒裝 (產地新鮮直送)",
+        "description": "來自紐西蘭純淨果園的頂級 Envy 蘋果，擁有極佳的清脆口感與濃郁香甜風味。果肉細緻多汁且切開後不易氧化變色，是品味生活的優質首選。",
+        "usage": "- **保存方式**：收到後請冷藏保存，冰涼後切片食用風味更佳。\n- **品嘗建議**：果皮薄脆且富含營養，清水洗淨後可直接連皮享用。"
     }
 }
 
@@ -227,6 +227,12 @@ elif st.session_state.current_view in PRODUCTS:
 
     st.subheader("✨ 產品介紹")
     st.write(p["description"])
+
+    # 增加 apples.jpeg 於產品介紹中
+    if os.path.exists("apples.jpeg"):
+        st.image("apples.jpeg", use_container_width=True)
+    else:
+        render_placeholder(height="240px")
 
     st.subheader("📖 建議用法")
     st.markdown(p["usage"])
