@@ -89,76 +89,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# --- 產品資料庫 (對應您上傳的真實圖片檔名) ---
+# --- 產品資料庫 (僅保留蘋果並設為本月推薦) ---
 PRODUCTS = {
-    # 歐洲區
-    "china_oel": {
-        "name": "德國百靈油",
-        "sub_name": "萬用薄荷精油",
-        "image": "china.oil.jpeg",
-        "category": "europe",
-        "is_recommended": True, 
-        "spec": "容量：100ml | 德國原裝進口",
-        "description": "德國原裝進口，由 100% 純薄荷精油提煉而成。主要效用包含緩解頭痛、改善感冒引起的鼻塞與咳嗽、緩解肌肉痠痛、舒緩腸胃不適，是家庭常備的萬用精油。",
-        "usage": "- **外用**：取適量塗抹於肌肉痠痛處。\n- **內服**：滴 1~2 滴於溫開水中飲用。\n- **吸入**：滴於熱水中吸入蒸氣。"
-    },
-    "whisky_21yr": {
-        "name": "蘇格蘭 21 年威士忌",
-        "sub_name": "桶陳歲月・珍稀醇厚",
-        "image": "whisky.21yr.jpeg",
-        "category": "europe",
-        "is_recommended": True, 
-        "spec": "容量：700ml | 酒精濃度：40% | 蘇格蘭原裝進口",
-        "description": "嚴選蘇格蘭頂級橡木桶陳釀 21 年以上，經過歲月淬鍊展現出深邃的琥珀色澤。入口帶有濃郁的蜂蜜、成熟果香與淡淡的橡木芬芳，口感絲滑醇厚、尾韻悠長，是品味人士不可錯過的珍稀佳釀。",
-        "usage": "- **純飲**：建議常溫飲用，或靜置幾分鐘讓香氣完全釋放。\n- **冰飲**：加入一顆大冰球，感受層次隨溫度變化的迷人風味。"
-    },
-    "seal_oil": {
-        "name": "挪威頂級深海海豹油",
-        "sub_name": "北歐頂級保養",
-        "image": "seel.oil.png",
-        "category": "europe",
-        "is_recommended": False,
-        "spec": "容量：120 粒膠囊裝",
-        "description": "來自純淨挪威海域，富含高純度 Omega-3 (EPA/DHA/DPA)。比一般魚油更容易被人體吸收，是守護全家人心血管與關節健康的北歐秘方。",
-        "usage": "- **日常保養**：每日早晚各 1 粒，隨餐食用。\n- **加強保養**：每日 4 粒。"
-    },
-    "krill_oil": {
-        "name": "挪威頂級南極磷蝦油",
-        "sub_name": "海洋極境純淨萃取",
-        "image": "shrimp.jpeg",
-        "category": "europe",
-        "is_recommended": True,
-        "spec": "容量：60 粒軟膠囊裝",
-        "description": "捕撈自純淨無汙染的南極海域，磷蝦油富含磷脂質結合型的 Omega-3 (EPA/DHA) 以及強效抗氧化劑「蝦青素」。其吸收率極高且無腥味，能全面照顧日常思緒、循環與晶亮健康。",
-        "usage": "- **日常保健**：每日 1~2 粒，隨餐或餐後食用最佳。\n- **注意事項**：對蝦、蟹等甲殼類過敏者請避免食用。"
-    },
-    "foie_gras": {
-        "name": "匈牙利傳統手工鵝肝醬",
-        "sub_name": "經典佐餐名品",
-        "image": "goose.liver.jpeg",
-        "category": "europe",
-        "is_recommended": False,
-        "spec": "重量：180g (罐裝)",
-        "description": "歐洲老饕的頂級享受！採百年傳統工藝製作，口感如絲綢般滑順，香氣濃郁迷人。適合搭配薄脆餅乾或無花果醬，作為紅酒佐餐的絕佳選擇。",
-        "usage": "- **食用建議**：冷藏後取出直接塗抹於烤過的法式麵包或蘇打餅乾上。"
-    },
-    # 水果區
-    "aus_cherry": {
-        "name": "澳洲塔斯馬尼亞櫻桃",
-        "sub_name": "空運特大果",
-        "image": "cherry.jpeg",
-        "category": "fruit",
-        "is_recommended": True, 
-        "spec": "規格：頂級禮盒裝 (優選大果)",
-        "description": "冬季限定的紅寶石！空運直送來台，果肉飽滿多汁，甜度極高且帶有迷人脆度。年節送禮最有面子的選擇。",
-        "usage": "- **保存方式**：收到後請立即冷藏，建議於 5-7 天內食用完畢以保新鮮。"
-    },
     "envy_apple": {
         "name": "紐西蘭 Envy 頂級蘋果",
         "sub_name": "香甜脆口果王",
         "image": "apple.jpeg",
         "category": "fruit",
-        "is_recommended": False,
+        "is_recommended": True,
         "spec": "規格：精美禮盒裝",
         "description": "來自紐西蘭的頂級 Envy 蘋果，擁有極佳的清脆口感與濃郁香甜風味。果肉細緻且不易變色，是品味生活的優質之選。",
         "usage": "- **保存方式**：冷藏保存，冰涼後切片食用風味更佳。"
