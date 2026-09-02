@@ -97,7 +97,6 @@ PRODUCTS = {
         "image": "goose.png",
         "category": "europe",
         "is_recommended": True,
-        "spec": "容量：100公克／罐 | 團員限定價：€ 25",
         "description": "匈牙利經典伴手禮！細緻滑順、濃郁香醇，傳承歐洲經典工藝。開罐即可享用，是老饕佐餐與品味生活的頂級饗宴。",
         "usage": "- **搭配食用**：開罐即食，塗抹於烤法式麵包、脆餅上風味絕佳。\n- **餐酒搭配**：適合佐以甜白酒、香檳或精選紅酒。"
     },
@@ -107,7 +106,6 @@ PRODUCTS = {
         "image": "oil.png",
         "category": "europe",
         "is_recommended": True,
-        "spec": "容量：100毫升／罐 | 團員限定價：€ 22",
         "description": "匈牙利純淨天然萃取南瓜籽油。男性保養有助於維持順暢、夜間舒適；女性保養提供夜間少打擾、自在舒適與安穩睡眠。保健食品非藥品，日常保養首選。",
         "usage": "- **日常保養**：每天一匙，直接飲用或隨餐攝取。\n- **輕食料理**：可淋於生菜沙拉、溫熱湯品中增添堅果香氣。"
     },
@@ -116,8 +114,7 @@ PRODUCTS = {
         "sub_name": "一小匙・讓料理瞬間升級",
         "image": "truffle.png",
         "category": "europe",
-        "is_recommended": True,
-        "spec": "容量：90公克／罐 | 團員限定價：€ 18",
+        "is_recommended": True
         "description": "嚴選珍稀白黑松露調配，擁有極致濃郁的松露芬芳。冷熱料理皆適合，無需複雜烹煮，直接加入即可為餐點注入頂級靈魂。",
         "usage": "- **拌麵佐醬**：直接拌入義大利麵、燉飯提升層次。\n- **佐餐抹醬**：塗抹於法棍切片、烘烤麵包。\n- **排餐點綴**：搭配香煎牛排、羊排等肉類料理。"
     }
@@ -247,12 +244,6 @@ elif st.session_state.current_view in PRODUCTS:
 
     st.subheader("✨ 產品介紹")
     st.write(p["description"])
-
-    # 增加 apples.jpeg 於產品介紹中
-    if os.path.exists("apples.jpeg"):
-        st.image("apples.jpeg", use_container_width=True)
-    else:
-        render_placeholder(height="240px")
 
     st.subheader("📖 建議用法")
     st.markdown(p["usage"])
