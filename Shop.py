@@ -89,7 +89,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# --- 產品資料庫 (全數更新為最新推薦產品) ---
+# --- 產品資料庫 (移除規格與價格敘述) ---
 PRODUCTS = {
     "golden_goose_liver": {
         "name": "匈牙利經典金鵝肝",
@@ -114,7 +114,7 @@ PRODUCTS = {
         "sub_name": "一小匙・讓料理瞬間升級",
         "image": "truffle.png",
         "category": "europe",
-        "is_recommended": True
+        "is_recommended": True,
         "description": "嚴選珍稀白黑松露調配，擁有極致濃郁的松露芬芳。冷熱料理皆適合，無需複雜烹煮，直接加入即可為餐點注入頂級靈魂。",
         "usage": "- **拌麵佐醬**：直接拌入義大利麵、燉飯提升層次。\n- **佐餐抹醬**：塗抹於法棍切片、烘烤麵包。\n- **排餐點綴**：搭配香煎牛排、羊排等肉類料理。"
     }
@@ -236,8 +236,6 @@ elif st.session_state.current_view in PRODUCTS:
             render_placeholder(height="300px")
         
     with info_col:
-        st.markdown(f"**📝 規格：** {p['spec']}")
-        st.markdown("---")
         st.markdown("💡 *歡迎私訊王子了解更多詳情與最新動態。*")
 
     st.divider()
