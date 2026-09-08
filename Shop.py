@@ -95,6 +95,7 @@ PRODUCTS = {
         "name": "匈牙利經典金鵝肝",
         "sub_name": "歐洲餐桌上的奢華美味",
         "image": "goose.png",
+        "detail_image": "goose2.JPG",
         "category": "europe",
         "is_recommended": True,
         "description": "匈牙利經典伴手禮！細緻滑順、濃郁香醇，傳承歐洲經典工藝。開罐即可享用，是老饕佐餐與品味生活的頂級饗宴。",
@@ -104,6 +105,7 @@ PRODUCTS = {
         "name": "匈牙利天然南瓜籽油",
         "sub_name": "男女都適合・每天一匙日常保養",
         "image": "oil.png",
+        "detail_image": "oil2.JPG",
         "category": "europe",
         "is_recommended": True,
         "description": "匈牙利純淨天然萃取南瓜籽油。男性保養有助於維持順暢、夜間舒適；女性保養提供夜間少打擾、自在舒適與安穩睡眠。保健食品非藥品，日常保養首選。",
@@ -113,6 +115,7 @@ PRODUCTS = {
         "name": "匈牙利精品白黑松露醬",
         "sub_name": "一小匙・讓料理瞬間升級",
         "image": "truffle.png",
+        "detail_image": "truffle2.JPG",
         "category": "europe",
         "is_recommended": True,
         "description": "嚴選珍稀白黑松露調配，擁有極致濃郁的松露芬芳。冷熱料理皆適合，無需複雜烹煮，直接加入即可為餐點注入頂級靈魂。",
@@ -261,5 +264,13 @@ elif st.session_state.current_view in PRODUCTS:
     st.subheader("✨ 產品介紹")
     st.write(p["description"])
 
+    # 若商品有設定產品介紹補充圖，且檔案存在時自動顯示
+    if "detail_image" in p:
+        if os.path.exists(p["detail_image"]):
+            st.image(p["detail_image"], use_container_width=True)
+        else:
+            render_placeholder(height="240px")
+
     st.subheader("📖 建議用法")
     st.markdown(p["usage"])
+   
