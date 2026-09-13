@@ -124,7 +124,7 @@ PRODUCTS = {
     "china_oel": {
         "name": "德國百靈油",
         "sub_name": "德國經典百年秘方",
-        "image": "oel1.JPG",
+        "image": "oel1.jpg",
         "category": "europe",
         "is_recommended": False,
         "description": "由純薄荷精油提煉而成的德國經典百年秘方，清心醒腦、順暢呼吸，能有效舒緩日常不適，是家庭必備的萬用良品。＊附贈3瓶鼻吸、分裝吸管和隨身滾珠瓶",
