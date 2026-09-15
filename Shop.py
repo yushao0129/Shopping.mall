@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 # --- 網頁外觀設定 (日式低奢風格) ---
-st.set_page_config(page_title="王子的旅行代購", page_icon="👑", layout="centered")
+st.set_page_config(page_title="王子的好物清單", page_icon="👑", layout="centered")
 
 st.markdown("""
     <style>
