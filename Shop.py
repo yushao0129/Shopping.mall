@@ -215,7 +215,7 @@ def render_product_grid(filter_condition, filter_name):
 # 前端介面：商品列表頁 (首頁)
 # ==========================================
 if st.session_state.current_view == "shop_list":
-    st.markdown("<h1 style='text-align: center; font-size: 2.5rem;'>👑 王子的旅行代購</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; font-size: 2.5rem;'>👑 王子的好物清單</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #8c8a84; letter-spacing: 2px;'>全球嚴選・品味生活</p>", unsafe_allow_html=True)
     st.divider()
     
