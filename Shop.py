@@ -91,7 +91,7 @@ st.markdown("""
 
 # --- 產品資料庫 ---
 PRODUCTS = {
-    "golden_goose_liver": {
+"golden_goose_liver": {
         "name": "匈牙利經典金鵝肝",
         "sub_name": "歐洲餐桌上的奢華美味",
         "image": "goose1.JPG",
@@ -125,6 +125,7 @@ PRODUCTS = {
         "name": "德國百靈油",
         "sub_name": "德國經典百年秘方",
         "image": "oel1.jpg",
+        "detail_image": "oel2.JPG",
         "category": "europe",
         "is_recommended": False,
         "description": "由純薄荷精油提煉而成的德國經典百年秘方，清心醒腦、順暢呼吸，能有效舒緩日常不適，是家庭必備的萬用良品。＊附贈3瓶鼻吸、分裝吸管和隨身滾珠瓶",
@@ -134,6 +135,7 @@ PRODUCTS = {
         "name": "挪威頂級深海海豹油",
         "sub_name": "來自北大西洋的純淨海洋力量",
         "image": "selolje1.JPG",
+        "detail_image": "selolje2.PNG",
         "category": "europe",
         "is_recommended": False,
         "description": "萃取自純淨無污染的北大西洋海域，富含 Omega-3（含 EPA、DHA、DPA）及多元脂肪酸與維生素 D3，滋養每一個重要的日常，有助於保持活力、延緩衰老與改善睡眠品質。",
