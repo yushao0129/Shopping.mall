@@ -218,12 +218,6 @@ if st.session_state.current_view == "shop_list":
     st.markdown("<h1 style='text-align: center; font-size: 2.5rem;'>👑 王子的旅行代購</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #8c8a84; letter-spacing: 2px;'>全球嚴選・品味生活</p>", unsafe_allow_html=True)
     st.divider()
-
-    st.markdown("<span class='elegant-subtitle'>特別企劃</span>", unsafe_allow_html=True)
-    st.subheader("⭐ 本月推薦")
-    render_product_grid(lambda p: p.get("is_recommended", False) == True, "rec")
-    
-    st.divider()
     
     st.markdown("<span class='elegant-subtitle'>歐洲生活</span>", unsafe_allow_html=True)
     st.subheader("🌍 歐洲代購區")
