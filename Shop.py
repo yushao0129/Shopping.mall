@@ -151,7 +151,7 @@ def check_password():
         st.session_state.authenticated = False
 
     if not st.session_state.authenticated:
-        st.markdown("<h1 style='text-align: center; margin-top: 15vh; font-size: 2.5rem;'>👑 王子的旅行代購</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; margin-top: 15vh; font-size: 2.5rem;'>👑 王子的好物清單</h1>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; letter-spacing: 2px; color: #8c8a84;'>「將世界的美好，帶回您身邊。」</p>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; margin-bottom: 2rem;'>請輸入專屬密碼以進入會員賣場</p>", unsafe_allow_html=True)
         
