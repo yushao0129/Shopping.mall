@@ -264,7 +264,7 @@ elif st.session_state.current_view in PRODUCTS:
             render_placeholder(height="300px")
         
     with info_col:
-        st.markdown("💡 *與王子確認後欲購買的商品。*")
+        st.markdown("💡 *歡迎與王子確認商品資訊。*")
 
     st.divider()
 
