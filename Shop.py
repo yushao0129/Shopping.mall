@@ -103,7 +103,7 @@ PRODUCTS = {
     },
     "pumpkin_seed_oil": {
         "name": "匈牙利天然南瓜籽油",
-        "sub_name": "男女都適合・每天一匙日常保養",
+        "sub_name": "男女都適合，每天一匙日常保養",
         "image": "oil1.JPG",
         "detail_image": "oil2.JPG",
         "category": "europe",
@@ -113,7 +113,7 @@ PRODUCTS = {
     },
     "truffle_sauce": {
         "name": "匈牙利精品白黑松露醬",
-        "sub_name": "一小匙・讓料理瞬間升級",
+        "sub_name": "一小匙，讓料理瞬間升級",
         "image": "truffle1.JPG",
         "detail_image": "truffle2.JPG",
         "category": "europe",
