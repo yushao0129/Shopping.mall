@@ -103,7 +103,7 @@ PRODUCTS = {
     },
     "pumpkin_seed_oil": {
         "name": "匈牙利天然南瓜籽油",
-        "sub_name": "男女都適合，每天一匙日常保養",
+        "sub_name": "男女適合，每天一匙日常保養",
         "image": "oil1.JPG",
         "detail_image": "oil2.JPG",
         "category": "europe",
