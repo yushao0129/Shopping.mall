@@ -92,7 +92,7 @@ st.markdown("""
 # --- 產品資料庫 ---
 PRODUCTS = {
 "golden_goose_liver": {
-        "name": "匈牙利經典金鵝肝🇭🇺",
+        "name": "🇭🇺匈牙利經典金鵝肝",
         "sub_name": "歐洲餐桌上的奢華美味",
         "image": "goose1.JPG",
         "detail_image": "goose2.JPG",
@@ -102,7 +102,7 @@ PRODUCTS = {
         "usage": "- **搭配食用**：開罐即食，塗抹於烤法式麵包、脆餅上風味絕佳。\n- **餐酒搭配**：適合佐以甜白酒、香檳或精選紅酒。"
     },
     "pumpkin_seed_oil": {
-        "name": "匈牙利天然南瓜籽油🇭🇺",
+        "name": "🇭🇺匈牙利天然南瓜籽油",
         "sub_name": "男女適合，每天一匙日常保養",
         "image": "oil1.JPG",
         "detail_image": "oil2.JPG",
@@ -112,7 +112,7 @@ PRODUCTS = {
         "usage": "- **日常保養**：每天一匙，直接飲用或隨餐攝取。\n- **輕食料理**：可淋於生菜沙拉、溫熱湯品中增添堅果香氣。"
     },
     "truffle_sauce": {
-        "name": "匈牙利精品白黑松露醬🇭🇺",
+        "name": "🇭🇺匈牙利精品白黑松露醬",
         "sub_name": "一小匙，讓料理瞬間升級",
         "image": "truffle1.JPG",
         "detail_image": "truffle2.JPG",
@@ -122,7 +122,7 @@ PRODUCTS = {
         "usage": "- **拌麵佐醬**：直接拌入義大利麵、燉飯提升層次。\n- **佐餐抹醬**：塗抹於法棍切片、烘烤麵包。\n- **排餐點綴**：搭配香煎牛排、羊排等肉類料理。"
     },
     "china_oel": {
-        "name": "德國百靈油🇩🇪",
+        "name": "🇩🇪德國百靈油",
         "sub_name": "德國經典百年秘方",
         "image": "oel1.jpg",
         "detail_image": "oel2.JPG",
@@ -132,7 +132,7 @@ PRODUCTS = {
         "usage": "- **外用塗抹**：取適量塗抹於額頭、太陽穴或緊繃肩頸。\n- **吸入蒸氣**：滴於溫熱水中吸入清爽薄荷蒸氣。\n- **搭配隨身配件**：可裝入滾珠瓶隨身攜帶，或搭配專用鼻吸入器使用。"
     },
     "norway_selolje": {
-        "name": "挪威頂級深海海豹油🇳🇴",
+        "name": "🇳🇴挪威頂級深海海豹油",
         "sub_name": "來自北大西洋的純淨海洋力量",
         "image": "selolje1.JPG",
         "detail_image": "selolje2.PNG",
@@ -142,7 +142,7 @@ PRODUCTS = {
         "usage": "- **日常保健**：每日定時隨餐食用，補充純淨天然營養。\n- **保存方式**：請存放於陰涼乾燥處，避免陽光直射與潮濕。"
     },
     "apple": {
-    "name": "紐西蘭Dazzle蘋果🇳🇿",
+    "name": "🇳🇿紐西蘭Dazzle蘋果",
     "sub_name": "產地直送・清甜爽脆",
     "image": "apple.JPG",
     "detail_image": "apple1.PNG",
