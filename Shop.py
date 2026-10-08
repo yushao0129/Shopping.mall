@@ -144,7 +144,7 @@ PRODUCTS = {
 },
 "blueberry": {
     "name": "🇳🇿紐西蘭藍莓護眼膠囊",
-    "sub_name": "藍莓萃取・花青素・維生素C",
+    "sub_name": "藍莓萃取，花青素，維生素C",
     "image": "blue.PNG",
     "detail_image": "blue2.PNG",
     "category": "europe",
