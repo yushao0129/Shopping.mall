@@ -1,5 +1,10 @@
 import streamlit as st
 import os
+import smtplib
+from datetime import datetime
+from email.mime.text import MIMEText
+from email.header import Header
+from zoneinfo import ZoneInfo
 
 # --- 網頁外觀設定 (日式低奢風格) ---
 st.set_page_config(page_title="王子的好物清單", page_icon="👑", layout="centered")
@@ -33,7 +38,7 @@ st.markdown("""
     footer {visibility: hidden;}
     
     /* 優化按鈕外觀 */
-    .stButton>button {
+    .stButton>button, .stFormSubmitButton>button {
         background-color: #3b3a37;
         color: #f7f5f0;
         border: none;
@@ -44,7 +49,7 @@ st.markdown("""
         width: 100%;
         margin-top: auto; /* 讓按鈕自動推到底部對齊 */
     }
-    .stButton>button:hover {
+    .stButton>button:hover, .stFormSubmitButton>button:hover {
         background-color: #5c5a56;
         color: #ffffff;
     }
@@ -195,6 +200,69 @@ def render_placeholder(height="160px"):
         </div>
     """, unsafe_allow_html=True)
 
+def send_order_email(product_name, customer_name, quantity, phone, address):
+    """把訂單寄到 secrets 裡設定的收件信箱（立即寄送）"""
+    cfg = st.secrets["email"]
+    order_time = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%Y-%m-%d %H:%M")
+
+    body = (
+        "王子的好物清單：收到一筆新訂單\n"
+        "------------------------------\n"
+        f"商品：{product_name}\n"
+        f"數量：{quantity}\n"
+        f"訂購人：{customer_name}\n"
+        f"聯絡電話：{phone}\n"
+        f"收件地址：{address}\n"
+        f"時間：{order_time}\n"
+    )
+    msg = MIMEText(body, "plain", "utf-8")
+    msg["Subject"] = Header(f"【新訂單】{product_name} × {quantity}（{customer_name}）", "utf-8")
+    msg["From"] = cfg["sender"]
+    msg["To"] = cfg["receiver"]
+
+    server_host = cfg.get("smtp_server", "smtp.gmail.com")
+    server_port = int(cfg.get("smtp_port", 465))
+    with smtplib.SMTP_SSL(server_host, server_port, timeout=20) as server:
+        server.login(cfg["sender"], cfg["app_password"])
+        server.send_message(msg)
+
+
+def render_order_form(product_key, product_name):
+    """商品詳細頁底部的訂購表單"""
+    st.divider()
+    st.subheader("🛒 訂購表單")
+
+    with st.form(f"order_form_{product_key}", clear_on_submit=True):
+        customer_name = st.text_input("訂購人姓名", placeholder="請輸入您的姓名")
+        phone = st.text_input("聯絡電話", placeholder="例如 0912-345-678")
+        address = st.text_input("收件地址", placeholder="請輸入完整收件地址")
+        quantity = st.number_input("訂購數量", min_value=1, max_value=99, value=1, step=1)
+        submitted = st.form_submit_button("送 出 訂 單", use_container_width=True)
+
+    if submitted:
+        customer_name = customer_name.strip()
+        phone = phone.strip()
+        address = address.strip()
+        phone_digits = "".join(ch for ch in phone if ch.isdigit())
+
+        missing = [label for label, value in
+                   (("訂購人姓名", customer_name), ("聯絡電話", phone), ("收件地址", address)) if not value]
+        if missing:
+            st.error(f"請填寫：{'、'.join(missing)}。")
+            return
+        if not (8 <= len(phone_digits) <= 15) or any(ch not in "0123456789-+() " for ch in phone):
+            st.error("聯絡電話格式不正確，請重新確認。")
+            return
+        try:
+            send_order_email(product_name, customer_name, int(quantity), phone, address)
+        except (KeyError, FileNotFoundError):
+            st.error("訂單系統尚未設定寄件信箱，請聯繫管理員。")
+        except Exception:
+            st.error("訂單送出失敗，請稍後再試。")
+        else:
+            st.success(f"感謝 {customer_name}！已收到您的訂單：{product_name} × {int(quantity)}。")
+
+
 def render_product_grid(filter_condition, filter_name):
     """
     filter_condition: 用來過濾商品的 lambda 函數
@@ -279,3 +347,5 @@ elif st.session_state.current_view in PRODUCTS:
 
     st.subheader("📖 建議用法")
     st.markdown(p["usage"])
+
+    render_order_form(product_key, p["name"])
