@@ -187,6 +187,16 @@ PRODUCTS = {
     "description": "來自義大利威尼斯 SEGRETI DI BELLEZZA 的秘密花園系列（VELVET BLACK ROSE）。珍貴黑玫瑰乾爽精華油，散發迷人黑玫瑰香氛，蘊含 Omega 3、6、9 脂肪酸，滋養肌膚、提升光澤。",
     "usage": "- **使用方式**：早晚取數滴，於掌心輕輕搓暖，再輕抹臉部與頸部。\n- **注意事項**：請避開眼周。"
 },
+"botanicus_rose_mask": {
+    "name": "🇨🇿菠丹妮奧圖玫瑰美白面膜 100g",
+    "sub_name": "玫瑰精油 × 乳木果油",
+    "image": "mask1.jpg",
+    "detail_image": "mask2.jpg",
+    "category": "europe",
+    "is_recommended": False,
+    "description": "捷克菠丹妮（BOTANICUS）玫瑰系列。蘊含奧圖玫瑰精油與乳木果油，滋潤乾燥肌膚，留下柔嫩觸感。免沖洗設計，簡單完成居家保養。",
+    "usage": "- **使用頻率**：每週 2 次。\n- **使用方式**：潔膚後均勻塗抹，避開眼周與唇周。\n- **免沖洗**：靜敷 20 分鐘後，將剩餘面膜輕輕按摩至吸收即可。"
+},
     
 }
 
