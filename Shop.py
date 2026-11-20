@@ -177,6 +177,16 @@ PRODUCTS = {
     "description": "義大利米蘭 INCAROSE 珍貴精華系列。蘋果細胞萃取搭配玻尿酸鈉，質地如絲絨般柔滑，輕盈好吸收，為肌膚帶來細緻水潤的保濕感。",
     "usage": "- **使用方式**：每日潔膚後，取適量塗抹全臉，輕柔按摩至吸收。\n- **後續保養**：等待 1～2 分鐘，再進行後續保養。"
 },
+"black_rose_oil": {
+    "name": "🇮🇹威尼斯秘密花園之黑玫瑰極速抗老精華油 30mL",
+    "sub_name": "黑玫瑰香氛，滋養肌膚光澤",
+    "image": "rose1.jpg",
+    "detail_image": "rose2.jpg",
+    "category": "europe",
+    "is_recommended": False,
+    "description": "來自義大利威尼斯 SEGRETI DI BELLEZZA 的秘密花園系列（VELVET BLACK ROSE）。珍貴黑玫瑰乾爽精華油，散發迷人黑玫瑰香氛，蘊含 Omega 3、6、9 脂肪酸，滋養肌膚、提升光澤。",
+    "usage": "- **使用方式**：早晚取數滴，於掌心輕輕搓暖，再輕抹臉部與頸部。\n- **注意事項**：請避開眼周。"
+},
     
 }
 
