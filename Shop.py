@@ -167,6 +167,16 @@ PRODUCTS = {
     "description": "義大利蕾莉歐（L'ERBOLARIO）抗時光系列多元精華。海藻萃取，清爽保濕，搭配植物水解蛋白與複合維他命，質地輕盈好吸收，給肌膚即時的緊緻與水潤感。",
     "usage": "- **使用時機**：使用調理滋養液後。\n- **使用方式**：取適量均勻塗抹於臉部、眼周及頸部。"
 },
+"angel_tears_serum": {
+    "name": "🇮🇹蕾利歐 天使之淚保濕精華露 30mL",
+    "sub_name": "絲絨般的柔滑觸感",
+    "image": "angel1.jpg",
+    "detail_image": "angel2.jpg",
+    "category": "europe",
+    "is_recommended": False,
+    "description": "義大利米蘭 INCAROSE 珍貴精華系列。蘋果細胞萃取搭配玻尿酸鈉，質地如絲絨般柔滑，輕盈好吸收，為肌膚帶來細緻水潤的保濕感。",
+    "usage": "- **使用方式**：每日潔膚後，取適量塗抹全臉，輕柔按摩至吸收。\n- **後續保養**：等待 1～2 分鐘，再進行後續保養。"
+},
     
 }
 
