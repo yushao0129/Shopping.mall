@@ -101,7 +101,7 @@ PRODUCTS = {
         "sub_name": "歐洲餐桌上的奢華美味",
         "image": "goose1.JPG",
         "detail_image": "goose2.JPG",
-        "category": "europe",
+        "category": "food",
         "is_recommended": True,
         "description": "匈牙利經典伴手禮！細緻滑順、濃郁香醇，傳承歐洲經典工藝。開罐即可享用，是老饕佐餐與品味生活的頂級饗宴。",
         "usage": "- **搭配食用**：開罐即食，塗抹於烤法式麵包、脆餅上風味絕佳。\n- **餐酒搭配**：適合佐以甜白酒、香檳或精選紅酒。"
@@ -111,7 +111,7 @@ PRODUCTS = {
         "sub_name": "男女適合，每天一匙日常保養",
         "image": "oil1.JPG",
         "detail_image": "oil2.JPG",
-        "category": "europe",
+        "category": "food",
         "is_recommended": True,
         "description": "匈牙利純淨天然萃取南瓜籽油。男性保養有助於維持順暢、夜間舒適；女性保養提供夜間少打擾、自在舒適與安穩睡眠。保健食品非藥品，日常保養首選。",
         "usage": "- **日常保養**：每天一匙，直接飲用或隨餐攝取。\n- **輕食料理**：可淋於生菜沙拉、溫熱湯品中增添堅果香氣。"
@@ -121,7 +121,7 @@ PRODUCTS = {
         "sub_name": "一小匙，讓料理瞬間升級",
         "image": "truffle1.JPG",
         "detail_image": "truffle2.JPG",
-        "category": "europe",
+        "category": "food",
         "is_recommended": True,
         "description": "嚴選珍稀白黑松露調配，擁有極致濃郁的松露芬芳。冷熱料理皆適合，無需複雜烹煮，直接加入即可為餐點注入頂級靈魂。",
         "usage": "- **拌麵佐醬**：直接拌入義大利麵、燉飯提升層次。\n- **佐餐抹醬**：塗抹於法棍切片、烘烤麵包。\n- **排餐點綴**：搭配香煎牛排、羊排等肉類料理。"
@@ -131,7 +131,7 @@ PRODUCTS = {
         "sub_name": "德國經典百年秘方",
         "image": "oel1.jpg",
         "detail_image": "oel2.JPG",
-        "category": "europe",
+        "category": "health",
         "is_recommended": False,
         "description": "由純薄荷精油提煉而成的德國經典百年秘方，清心醒腦、順暢呼吸，能有效舒緩日常不適，是家庭必備的萬用良品。＊附贈3瓶鼻吸、分裝吸管和隨身滾珠瓶",
         "usage": "- **外用塗抹**：取適量塗抹於額頭、太陽穴或緊繃肩頸。\n- **吸入蒸氣**：滴於溫熱水中吸入清爽薄荷蒸氣。\n- **搭配隨身配件**：可裝入滾珠瓶隨身攜帶，或搭配專用鼻吸入器使用。"
@@ -141,7 +141,7 @@ PRODUCTS = {
         "sub_name": "來自北大西洋的純淨海洋力量",
         "image": "selolje1.JPG",
         "detail_image": "selolje2.PNG",
-        "category": "europe",
+        "category": "health",
         "is_recommended": False,
         "description": "萃取自純淨無污染的北大西洋海域，富含 Omega-3（含 EPA、DHA、DPA）及多元脂肪酸與維生素 D3，滋養每一個重要的日常，有助於保持活力、延緩衰老與改善睡眠品質。",
         "usage": "- **日常保健**：每日2粒隨正餐食用，補充純淨天然營養。\n- **保存方式**：請存放於陰涼乾燥處，避免陽光直射與潮濕。"
@@ -152,7 +152,7 @@ PRODUCTS = {
     "sub_name": "藍莓萃取，花青素，維生素C",
     "image": "blue.PNG",
     "detail_image": "blue2.PNG",
-    "category": "europe",
+    "category": "health",
     "is_recommended": False,
     "description": "👁️ 守護靈魂之窗：\n花青素具有抗氧化能力，可協助減少自由基造成的氧化壓力。\n\n👁️ 舒緩長時間用眼：\n適合長時間看手機、電腦、開車及閱讀族群。\n\n👁️ 維持視覺健康：\n花青素與維生素C共同提供抗氧化保護，有助維持眼睛健康。\n\n👁️ 日常保養：\n適合作為每天的營養補充，幫助維持正常生理機能。",
     "usage": "- **日常補充**：每日早晚2粒。\n- **隨餐食用**：可搭配日常餐食一起補充。\n- **保存方式**：請置於陰涼乾燥處，避免陽光直射與高溫潮濕。"
@@ -162,7 +162,7 @@ PRODUCTS = {
     "sub_name": "海藻萃取，清爽保濕",
     "image": "serum1.jpg",
     "detail_image": "serum2.jpg",
-    "category": "europe",
+    "category": "skincare",
     "is_recommended": False,
     "description": "義大利蕾莉歐（L'ERBOLARIO）抗時光系列多元精華。海藻萃取，清爽保濕，搭配植物水解蛋白與複合維他命，質地輕盈好吸收，給肌膚即時的緊緻與水潤感。",
     "usage": "- **使用時機**：使用調理滋養液後。\n- **使用方式**：取適量均勻塗抹於臉部、眼周及頸部。"
@@ -172,7 +172,7 @@ PRODUCTS = {
     "sub_name": "絲絨般的柔滑觸感",
     "image": "angel1.jpg",
     "detail_image": "angel2.jpg",
-    "category": "europe",
+    "category": "skincare",
     "is_recommended": False,
     "description": "義大利米蘭 INCAROSE 珍貴精華系列。蘋果細胞萃取搭配玻尿酸鈉，質地如絲絨般柔滑，輕盈好吸收，為肌膚帶來細緻水潤的保濕感。",
     "usage": "- **使用方式**：每日潔膚後，取適量塗抹全臉，輕柔按摩至吸收。\n- **後續保養**：等待 1～2 分鐘，再進行後續保養。"
@@ -182,7 +182,7 @@ PRODUCTS = {
     "sub_name": "黑玫瑰香氛，滋養肌膚光澤",
     "image": "rose1.jpg",
     "detail_image": "rose2.jpg",
-    "category": "europe",
+    "category": "skincare",
     "is_recommended": False,
     "description": "來自義大利威尼斯 SEGRETI DI BELLEZZA 的秘密花園系列（VELVET BLACK ROSE）。珍貴黑玫瑰乾爽精華油，散發迷人黑玫瑰香氛，蘊含 Omega 3、6、9 脂肪酸，滋養肌膚、提升光澤。",
     "usage": "- **使用方式**：早晚取數滴，於掌心輕輕搓暖，再輕抹臉部與頸部。\n- **注意事項**：請避開眼周。"
@@ -192,7 +192,7 @@ PRODUCTS = {
     "sub_name": "玫瑰精油 × 乳木果油",
     "image": "mask1.jpg",
     "detail_image": "mask2.jpg",
-    "category": "europe",
+    "category": "skincare",
     "is_recommended": False,
     "description": "捷克菠丹妮（BOTANICUS）玫瑰系列。蘊含奧圖玫瑰精油與乳木果油，滋潤乾燥肌膚，留下柔嫩觸感。免沖洗設計，簡單完成居家保養。",
     "usage": "- **使用頻率**：每週 2 次。\n- **使用方式**：潔膚後均勻塗抹，避開眼周與唇周。\n- **免沖洗**：靜敷 20 分鐘後，將剩餘面膜輕輕按摩至吸收即可。"
@@ -202,7 +202,7 @@ PRODUCTS = {
     "sub_name": "新配方，每2粒含 Omega-3 870mg",
     "image": "omega1.jpg",
     "detail_image": "omega2.jpg",
-    "category": "europe",
+    "category": "health",
     "is_recommended": False,
     "description": "Polarvita 新配方高濃度深海魚油（DEEP SEA OMEGA-3）。每 2 粒含 Omega-3 870 mg，其中 DHA 480 mg、EPA 360 mg，並搭配 FloraGLO 葉黃素與多種維生素，一次補足日常所需營養。每瓶 90 粒。",
     "usage": "- **日常補充**：每日 2 粒。\n- **食用時間**：建議餐後食用。\n- **保存方式**：請置於陰涼乾燥處，避免陽光直射與高溫潮濕。"
@@ -212,7 +212,7 @@ PRODUCTS = {
     "sub_name": "100% 沙棘果肉油，蒙古製造",
     "image": "seabuck1.jpg",
     "detail_image": "seabuck2.jpg",
-    "category": "europe",
+    "category": "health",
     "is_recommended": False,
     "description": "來自蒙古草原的 Shar Doctor 純沙棘果油，100% 沙棘果肉油，蒙古製造。含 Omega-7、Omega-6、Omega-3 脂肪酸，是日常保養的天然好選擇。",
     "usage": "- **建議食用**：每次 1 茶匙，每日 2～3 次。\n- **食用時間**：可於餐前或餐後 30 分鐘食用。"
@@ -369,9 +369,21 @@ if st.session_state.current_view == "shop_list":
     st.markdown("<p style='text-align: center; color: #8c8a84; letter-spacing: 2px;'>全球嚴選・品味生活</p>", unsafe_allow_html=True)
     st.divider()
     
-    st.markdown("<span class='elegant-subtitle'>歐洲生活</span>", unsafe_allow_html=True)
-    st.subheader("🌍 歐洲商品區")
-    render_product_grid(lambda p: p["category"] == "europe", "euro")
+    st.markdown("<span class='elegant-subtitle'>日常保健</span>", unsafe_allow_html=True)
+    st.subheader("💊 保健品區")
+    render_product_grid(lambda p: p["category"] == "health", "health")
+
+    st.divider()
+
+    st.markdown("<span class='elegant-subtitle'>餐桌美味</span>", unsafe_allow_html=True)
+    st.subheader("🍽️ 食品區")
+    render_product_grid(lambda p: p["category"] == "food", "food")
+
+    st.divider()
+
+    st.markdown("<span class='elegant-subtitle'>美肌保養</span>", unsafe_allow_html=True)
+    st.subheader("🌸 保養品區")
+    render_product_grid(lambda p: p["category"] == "skincare", "skincare")
     
     st.divider()
     
