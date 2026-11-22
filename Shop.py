@@ -170,7 +170,7 @@ PRODUCTS = {
    
 },
 "blueberry": {
-    "name": "🇳🇴挪威藍莓護眼膠囊",
+    "name": "🇳🇿紐西蘭藍莓護眼膠囊",
     "sub_name": "藍莓萃取，花青素，維生素C",
     "image": "blue.PNG",
     "detail_image": "blue2.PNG",
@@ -220,7 +220,7 @@ PRODUCTS = {
     "usage": "- **使用頻率**：每週 2 次。\n- **使用方式**：潔膚後均勻塗抹，避開眼周與唇周。\n- **免沖洗**：靜敷 20 分鐘後，將剩餘面膜輕輕按摩至吸收即可。"
 },
 "polarvita_omega3": {
-    "name": "🇳🇴Polarvita 挪威高濃度深海魚油 90粒",
+    "name": "🇳🇿Polarvita 高濃度深海魚油 90粒",
     "sub_name": "新配方，每2粒含 Omega-3 870mg",
     "image": "omega1.jpg",
     "detail_image": "omega2.jpg",
