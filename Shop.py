@@ -207,6 +207,16 @@ PRODUCTS = {
     "description": "Polarvita 新配方高濃度深海魚油（DEEP SEA OMEGA-3）。每 2 粒含 Omega-3 870 mg，其中 DHA 480 mg、EPA 360 mg，並搭配 FloraGLO 葉黃素與多種維生素，一次補足日常所需營養。每瓶 90 粒。",
     "usage": "- **日常補充**：每日 2 粒。\n- **食用時間**：建議餐後食用。\n- **保存方式**：請置於陰涼乾燥處，避免陽光直射與高溫潮濕。"
 },
+"shar_doctor_seabuckthorn": {
+    "name": "🇲🇳Shar Doctor 蒙古純沙棘果油 100mL",
+    "sub_name": "100% 沙棘果肉油，蒙古製造",
+    "image": "seabuck1.jpg",
+    "detail_image": "seabuck2.jpg",
+    "category": "europe",
+    "is_recommended": False,
+    "description": "來自蒙古草原的 Shar Doctor 純沙棘果油，100% 沙棘果肉油，蒙古製造。含 Omega-7、Omega-6、Omega-3 脂肪酸，是日常保養的天然好選擇。",
+    "usage": "- **建議食用**：每次 1 茶匙，每日 2～3 次。\n- **食用時間**：可於餐前或餐後 30 分鐘食用。"
+},
     
 }
 
