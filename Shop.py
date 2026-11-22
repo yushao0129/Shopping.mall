@@ -1,6 +1,8 @@
 import streamlit as st
 import os
 import smtplib
+import json
+import urllib.request
 from datetime import datetime
 from email.mime.text import MIMEText
 from email.header import Header
@@ -168,7 +170,7 @@ PRODUCTS = {
    
 },
 "blueberry": {
-    "name": "🇳🇿紐西蘭藍莓護眼膠囊",
+    "name": "🇳🇴挪威藍莓護眼膠囊",
     "sub_name": "藍莓萃取，花青素，維生素C",
     "image": "blue.PNG",
     "detail_image": "blue2.PNG",
@@ -318,6 +320,40 @@ def send_order_email(product_name, customer_name, quantity, phone, delivery, add
         server.send_message(msg)
 
 
+def save_order_to_sheet(product_name, customer_name, quantity, phone, delivery, address):
+    """把訂單存進 Google 試算表（由 Apps Script 每 4 小時彙整寄一封信）"""
+    cfg = st.secrets["order_sheet"]
+    payload = json.dumps({
+        "token": cfg["token"],
+        "time": datetime.now(ZoneInfo("Asia/Taipei")).strftime("%Y-%m-%d %H:%M"),
+        "product": product_name,
+        "quantity": quantity,
+        "name": customer_name,
+        "phone": phone,
+        "delivery": delivery,
+        "address": address,
+    }).encode("utf-8")
+    req = urllib.request.Request(cfg["url"], data=payload,
+                                 headers={"Content-Type": "application/json"}, method="POST")
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        result = resp.read().decode("utf-8")
+    if "OK" not in result:
+        raise RuntimeError(f"試算表回應異常：{result[:200]}")
+
+
+def submit_order(*order):
+    """
+    有設定 [order_sheet] 時：訂單先存進試算表，每 4 小時彙整成一封信。
+    沒設定或試算表失敗時：改成立即寄信，確保訂單不會遺失。
+    """
+    try:
+        save_order_to_sheet(*order)
+        return
+    except Exception:
+        pass  # 沒設定試算表或存檔失敗 → 改走立即寄信
+    send_order_email(*order)
+
+
 def render_order_form(product_key, product_name):
     """商品詳細頁底部的訂購表單"""
     st.divider()
@@ -348,7 +384,7 @@ def render_order_form(product_key, product_name):
             st.error("聯絡電話格式不正確，請重新確認。")
             return
         try:
-            send_order_email(product_name, customer_name, int(quantity), phone, delivery, address)
+            submit_order(product_name, customer_name, int(quantity), phone, delivery, address)
         except (KeyError, FileNotFoundError):
             st.error("訂單系統尚未設定寄件信箱，請聯繫管理員。")
         except Exception:
