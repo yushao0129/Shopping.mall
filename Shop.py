@@ -217,6 +217,16 @@ PRODUCTS = {
     "description": "來自蒙古草原的 Shar Doctor 純沙棘果油，100% 沙棘果肉油，蒙古製造。含 Omega-7、Omega-6、Omega-3 脂肪酸，是日常保養的天然好選擇。",
     "usage": "- **建議食用**：每次 1 茶匙，每日 2～3 次。\n- **食用時間**：可於餐前或餐後 30 分鐘食用。"
 },
+"aomori_kougyoku_apple": {
+    "name": "🇯🇵日本青森空運紅顏姬蘋果 每箱36粒",
+    "sub_name": "果肉爽脆，入口清甜",
+    "image": "fuji1.jpg",
+    "detail_image": "fuji2.jpg",
+    "category": "fruit",
+    "is_recommended": False,
+    "description": "日本青森產地直送，空運來台的紅顏姬蘋果。果肉爽脆、入口清甜，洗淨切片即可連皮享用。每箱 36 粒。",
+    "usage": "- **享用方式**：洗淨切片，可連皮享用。\n- **保存小提醒**：整箱分裝時，逐顆以廚房紙巾包好，再裝袋封口冷藏。"
+},
     
 }
 
