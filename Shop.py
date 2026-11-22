@@ -82,6 +82,26 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
     
+    /* 首頁商品名稱清單（不顯示圖片） */
+    div[class*="st-key-list_"] .stButton>button {
+        background-color: rgba(255, 255, 255, 0.6);
+        color: #3b3a37;
+        border: 1px solid #e4e0d6;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 0.7rem 1rem;
+        margin-top: 0;
+    }
+    div[class*="st-key-list_"] .stButton>button:hover {
+        background-color: #3b3a37;
+        color: #f7f5f0;
+    }
+    div[class*="st-key-list_"] .stButton>button div,
+    div[class*="st-key-list_"] .stButton>button p {
+        text-align: left;
+        width: 100%;
+    }
+
     /* 優雅的中文小副標題 */
     .elegant-subtitle {
         font-size: 0.85rem;
@@ -270,7 +290,7 @@ def render_placeholder(height="160px"):
         </div>
     """, unsafe_allow_html=True)
 
-def send_order_email(product_name, customer_name, quantity, phone, address):
+def send_order_email(product_name, customer_name, quantity, phone, delivery, address):
     """把訂單寄到 secrets 裡設定的收件信箱（立即寄送）"""
     cfg = st.secrets["email"]
     order_time = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%Y-%m-%d %H:%M")
@@ -282,7 +302,8 @@ def send_order_email(product_name, customer_name, quantity, phone, address):
         f"數量：{quantity}\n"
         f"訂購人：{customer_name}\n"
         f"聯絡電話：{phone}\n"
-        f"收件地址：{address}\n"
+        f"取貨方式：{delivery}\n"
+        f"收件地址：{address or '（現場取貨，免填）'}\n"
         f"時間：{order_time}\n"
     )
     msg = MIMEText(body, "plain", "utf-8")
@@ -305,7 +326,8 @@ def render_order_form(product_key, product_name):
     with st.form(f"order_form_{product_key}", clear_on_submit=True):
         customer_name = st.text_input("訂購人姓名", placeholder="請輸入您的姓名")
         phone = st.text_input("聯絡電話", placeholder="例如 0912-345-678")
-        address = st.text_input("收件地址", placeholder="請輸入完整收件地址")
+        delivery = st.radio("取貨方式", ["現場取貨", "宅配到府"], horizontal=True)
+        address = st.text_input("收件地址（選擇宅配到府才需填寫）", placeholder="現場取貨可留空")
         quantity = st.number_input("訂購數量", min_value=1, max_value=99, value=1, step=1)
         submitted = st.form_submit_button("送 出 訂 單", use_container_width=True)
 
@@ -316,7 +338,9 @@ def render_order_form(product_key, product_name):
         phone_digits = "".join(ch for ch in phone if ch.isdigit())
 
         missing = [label for label, value in
-                   (("訂購人姓名", customer_name), ("聯絡電話", phone), ("收件地址", address)) if not value]
+                   (("訂購人姓名", customer_name), ("聯絡電話", phone)) if not value]
+        if delivery == "宅配到府" and not address:
+            missing.append("收件地址（宅配到府需填寫）")
         if missing:
             st.error(f"請填寫：{'、'.join(missing)}。")
             return
@@ -324,40 +348,31 @@ def render_order_form(product_key, product_name):
             st.error("聯絡電話格式不正確，請重新確認。")
             return
         try:
-            send_order_email(product_name, customer_name, int(quantity), phone, address)
+            send_order_email(product_name, customer_name, int(quantity), phone, delivery, address)
         except (KeyError, FileNotFoundError):
             st.error("訂單系統尚未設定寄件信箱，請聯繫管理員。")
         except Exception:
             st.error("訂單送出失敗，請稍後再試。")
         else:
-            st.success(f"感謝 {customer_name}！已收到您的訂單：{product_name} × {int(quantity)}。")
+            st.success(f"感謝 {customer_name}！已收到您的訂單：{product_name} × {int(quantity)}（{delivery}）。")
 
 
 def render_product_grid(filter_condition, filter_name):
     """
+    首頁只列出商品名稱，點擊後進入詳細頁看圖片與介紹。
     filter_condition: 用來過濾商品的 lambda 函數
     filter_name: 用來確保 button key 唯一的區塊名稱
     """
     filtered_keys = [k for k, v in PRODUCTS.items() if filter_condition(v)]
-    
+
     if not filtered_keys:
         st.markdown("*（目前本區尚無商品）*")
         return
 
-    cols = st.columns(3)
-    for idx, key in enumerate(filtered_keys):
-        p = PRODUCTS[key]
-        with cols[idx % 3]:
-            # 若無圖片，顯示優雅的文字留白
-            if os.path.exists(p["image"]):
-                st.image(p["image"], use_container_width=True)
-            else:
-                render_placeholder()
-            
-            st.markdown(f"<span class='elegant-subtitle'>{p.get('sub_name', '')}</span>", unsafe_allow_html=True)
-            st.markdown(f"**{p['name']}**")
-            
-            if st.button("點擊詳情", key=f"btn_{filter_name}_{key}", use_container_width=True):
+    with st.container(key=f"list_{filter_name}"):
+        for key in filtered_keys:
+            p = PRODUCTS[key]
+            if st.button(f"{p['name']}　›", key=f"btn_{filter_name}_{key}", use_container_width=True):
                 st.session_state.current_view = key
                 st.rerun()
 
